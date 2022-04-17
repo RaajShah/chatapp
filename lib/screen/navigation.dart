@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rohit_semriwal/chatapp/HomePage.dart';
 import 'package:rohit_semriwal/screen/sharedpre.dart';
 import 'package:rohit_semriwal/screen/streambuild.dart';
 
@@ -36,6 +37,17 @@ class Navigation extends StatelessWidget {
                 );
               },
               child: const Text('Go to Streambuilder'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomePage2(),
+                  ),
+                );
+              },
+              child: const Text('Go to chatApp'),
             ),
           ],
         ),
