@@ -1,5 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:rohit_semriwal/chatapp/pages/completeprofile.dart';
+import 'package:rohit_semriwal/chatapp/pages/login.dart';
+import 'package:rohit_semriwal/chatapp/pages/signup.dart';
 import 'package:rohit_semriwal/screen/navigation.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -14,9 +17,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Navigation(),
+      home: Signup(),
     );
   }
 }
