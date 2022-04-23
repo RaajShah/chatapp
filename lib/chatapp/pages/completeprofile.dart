@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -32,11 +31,14 @@ class _CompleteprofileState extends State<Completeprofile> {
             CupertinoButton(
                 child: CircleAvatar(
                   radius: 50,
-                  backgroundImage: FileImage(imageFile!),
-                  child: const Icon(
-                    Icons.person,
-                    size: 70,
-                  ),
+                  backgroundImage:
+                      (imageFile != null) ? FileImage(imageFile!) : null,
+                  child: (imageFile == null)
+                      ? const Icon(
+                          Icons.person,
+                          size: 70,
+                        )
+                      : null,
                 ),
                 onPressed: () {
                   showPhotoOptions();
@@ -112,4 +114,14 @@ class _CompleteprofileState extends State<Completeprofile> {
       ),
     );
   }
+
+  void checkValues() {
+    String fullName = fullnamecontroller.text.trim();
+
+    if (fullName == "" || imageFile == null) {
+      print('Please fill all the field');
+    } else {}
+  }
+
+  void uploadData() async {}
 }
